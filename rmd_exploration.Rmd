@@ -1,0 +1,30 @@
+---
+title: "Tibble Exploration"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    theme: cerulean
+---
+```{r load, warning=FALSE, echo=FALSE}
+library(tibble)
+library(gapminder)
+library(DT)
+```
+<!-- waring=FALSE hides any waring message, echo=FALSE hides any run code -->
+
+# Print out gapminder data:
+
+<!-- tibble::as_tibble(), :: calls for the funcction in the package without loading the whole package using library() -->
+
+```{r}
+gapminder
+```
+
+# Convert mtcars to a tibble, and wrap in datatable:
+
+```{r}
+datatable(as_tibble(mtcars))
+```
+
+<!-- This is a comment -->
