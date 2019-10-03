@@ -147,6 +147,9 @@ experiment <- tibble(
   measurement_1 = runif(6),
   measurement_2 = runif(6)
 )
+
+experiment %>% complete(nesting(name, trt), rep)
+
 experiment %>% expand(name, trt, rep)
 ```
 
