@@ -21,21 +21,21 @@ gapminder_sum %>%
 # read_csv can directly import URLs but read_excel requires you to firt download it.
 here()
 data_url <- "http://gattonweb.uky.edu/sheather/book/docs/datasets/GreatestGivers.xls"
-#old way: download.file(url = data_url, destfile = paste('./weeks_3_to_3/',greatestGivers.xls))
+#old way: download.file(url = data_url, destfile = paste('./weeks_3_to_7/',greatestGivers.xls))
 
 #Recommendation: use "basename"
 file_name <- basename(data_url)
 
-download.file(url = data_url, destfile = here::here("weeks_3_to_5", basename(data_url)))
+download.file(url = data_url, destfile = here::here("weeks_3_to_7", basename(data_url)))
 
 library(readxl)
-philanthropists <- read_excel(here::here("weeks_3_to_5", file_name),trim_ws = TRUE)              
+philanthropists <- read_excel(here::here("weeks_3_to_7", file_name),trim_ws = TRUE)              
 
 view(philanthropists)
 
 head(philanthropists)
 
-mri_file = here("weeks_3_to_5", "Firas-MRI.xlsx")
+mri_file = here("weeks_3_to_7", "Firas-MRI.xlsx")
 
 mri <- read_excel(mri_file, range = "A1:L12")
 view(mri)
