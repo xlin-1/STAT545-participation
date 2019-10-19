@@ -1,3 +1,11 @@
+---
+title: "Effective Visualizations"
+output: 
+  html_document:
+    keep_md: true
+    theme: paper
+---
+
 # Effective Visualizations
 
 Now that you know how to create graphics and visualizations in R, you are armed with powerful tools for scientific computing and analysis. With this power also comes great responsibility. Effective visualizations is an incredibly important aspect of scientific research and communication. There have been several books (see references) written about these principles. In class today we will be going through several case-studies trying to develop some expertise into making effective visualizations. 
@@ -101,7 +109,6 @@ Did you know that you can make interactive graphs and plots in R using the plotl
 This is a preview of what we'll be doing in STAT 547 - making dynamic and interactive dashboards using R!
 
 ```{r}
-install.packages("plotly")
 library(tidyverse)
 library(gapminder)
 library(plotly)
